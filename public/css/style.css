@@ -1,0 +1,10 @@
+.btn{
+    background-color: rgb(203 213 225 / var(--tw-bg-opacity));
+    border: 3px solid transparent;
+    transition: all 0.3s ease-in-out;
+}
+.btn:hover{
+    color: rgb(0, 0, 0);
+    background-color: transparent;
+    border: 3px solid rgb(203 213 225 / var(--tw-bg-opacity));
+}

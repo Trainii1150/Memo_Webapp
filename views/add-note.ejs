@@ -1,0 +1,19 @@
+<%- include('includes/head.ejs') -%>
+</head>
+<body>
+    <%- include('includes/nav.ejs') -%>
+    <main class="container">
+        <form class="mx-auto mt-10 max-w-[650px] mx-auto bg-[#e8f1f1] shadow-2xl rounded-lg" action="/add-note" method="POST" >
+          
+            <div class="flex flex-col px-10 py-4">
+                <h2 class="text-xl font-semibold leading-7 text-gray-900 mb-5">📒 New Memo:</h2>
+                <label for="title" class="mb-2">Title:</label>
+                <input type="text" name="title" class="w-[100%] mb-3 p-2 rounded-md" id="title"/>
+                <label for="Message" class="mb-2">Message:</label>
+                <textarea rows="5" name="message" class="w-[100%] mb-3 p-2 rounded-md"  id="message" style="resize: none;"></textarea>
+                <button class="btn mt-3 p-2 w-[20%] bg-slate-300 rounded-xl transition duration-150 ease-out hover:bg-transparent" type="submit">Add Memo</button>
+            </div>
+            
+        </form>
+    </main>
+</body>
