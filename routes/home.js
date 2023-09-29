@@ -5,4 +5,7 @@ const MemoController = require('../controller/memo')
 
 router.get('/', MemoController.getMemos);
 
+router.post('/delete-note',MemoController.PostDeleteMemo)
+
+
 module.exports = router;
