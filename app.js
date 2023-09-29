@@ -9,24 +9,6 @@ const app = express();
 app.set('view engine', 'ejs');
 app.set('views','views');
 
-/*const adminData = require('./routes/admin');
-const storeRoutes = require('./routes/store');
-
-app.use(bodyParser.urlencoded({ extended: false }));
-app.use(express.static(path.join(__dirname, 'public')));
-
-app.use('/admin',adminData.routes);
-app.use(storeRoutes);*/
-
-/*const adminData = require('./routes/admin');
-const storeRoutes = require('./routes/store');
-
-app.use(bodyParser.urlencoded({ extended: false }));
-app.use(express.static(path.join(__dirname, 'public')));
-
-app.use('/admin',adminData.routes);
-app.use(storeRoutes);*/
-
 const notememo = require('./routes/notes');
 const homeRoutes = require('./routes/home');
 
