@@ -23,7 +23,6 @@ exports.PostAddMemo = (req, res, next) => {
     const checkamOrPm = hours >= 12 ? 'pm' : 'am';
     const currentTime = `${hourshours = hours % 12 || 12}:${minutes} ${checkamOrPm}`;
     const currentDMY = `${currentDate.getDay()}/${currentDate.getMonth()}/${currentDate.getFullYear()}`
-
     const memos = new Memo(req.body.title,req.body.message,currentTime,currentDMY );
     if(req.body.title != '' && req.body.message != ''){
         memos.save();
@@ -31,5 +30,12 @@ exports.PostAddMemo = (req, res, next) => {
     else{
         console.log('Is null')
     }
-    res.redirect('/');
+    res.redirect('/');  
+};
+
+exports.postDeleteMemo = (req, res, next) => {
+    const noteId = req.body.noteId;
+    console.log()
+    Memo.delete(noteId);
+    res.redirect('/')
 };

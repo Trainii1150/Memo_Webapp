@@ -6,10 +6,11 @@
       <% if (n.length > 0) { %>
       <div class="flex flex-wrap justify-center items-start mt-10" id="cards">
         <% for (let note of n) { %>
-            <article class="p-5 mx-3 my-4 bg-[#e8f1f1] max-w-sm rounded transition ease-in-out delay-200 shadow-2xl hover:shadow-md" id="card">
+            <article class="p-5 mx-3 my-4 bg-[#e8f1f1] max-w-sm rounded transition ease-in-out delay-200 shadow-2xl hover:shadow-md" id="card" data-note-id="<%= note.id %>">
                 <div class="flex justify-between items-baseline border-b-red-800" id="card__textbody">
                     <div class="head mb-2 text-xl font-bold" id="card__title"><%= note.title %></div>
                     <form action="/delete-note" method="POST" >
+                      <input type="hidden" name="noteId" value="<%= note.id %>" id="id">
                       <button class="btn bg-slate-300 rounded-xl transition duration-150 ease-out hover:bg-transparent" type="submit">
                         Delete
                       </button>
