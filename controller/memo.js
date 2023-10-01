@@ -22,10 +22,9 @@ exports.PostAddMemo = (req, res, next) => {
     const minutes = currentDate.getMinutes();
     const checkamOrPm = hours >= 12 ? 'pm' : 'am';
     const currentTime = `${hourshours = hours % 12 || 12}:${minutes} ${checkamOrPm}`;
-    const currentDMY = `${currentDate.getDay()}/${currentDate.getMonth()}/${currentDate.getFullYear()}`
+    const currentDMY = `${currentDate.getDate()}/${currentDate.getMonth()+1}/${currentDate.getFullYear()}`
 
     const memos = new Memo(req.body.title,req.body.message,currentTime,currentDMY );
-
     if(req.body.title != '' && req.body.message != ''){
         memos.save();
     }
