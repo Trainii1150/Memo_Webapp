@@ -9,7 +9,7 @@ mongoose.Promise = global.Promise;
 mongoose.connect('mongodb+srv://<username>:<password>@cluster0.uk4kkhj.mongodb.net/?retryWrites=true&w=majority')
   .then(() => {
     console.log('Connected to MongoDB');
-    // เรียกใช้ฟังก์ชัน importData
+    // เรียกใช้ฟังก์ชัน importData 
   })
   .catch((err) => {
     console.error(err);
