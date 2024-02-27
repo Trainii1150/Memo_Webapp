@@ -10,9 +10,9 @@
                 <div class="flex justify-between items-baseline border-b-red-800" id="card__textbody">
                     <div class="head mb-2 text-xl font-bold" id="card__title"><%= note.title %></div>
                     <form action="/delete-note" method="POST" >
-                      <input type="hidden" name="noteId" value="<%= note.id %>" id="id">
-                      <button class="btn bg-slate-300 rounded-xl transition duration-150 ease-out hover:bg-transparent" type="submit">
-                        Delete
+                      <input type="hidden" name="noteId" value="<%= note.id %>" id="id"> 
+                      <button type="submit">
+                        <i class='bx bxs-trash-alt bx-sm'></i>
                       </button>
                     </form>
                    
